@@ -5,10 +5,10 @@ public class Counter {
     Counter(int n){
         this.count=n;
     }
-    void increment(){
+    public synchronized void increment(){
         count++;
     }
-    void decrement(){
+    public synchronized void decrement(){
         count --;
     }
 }
