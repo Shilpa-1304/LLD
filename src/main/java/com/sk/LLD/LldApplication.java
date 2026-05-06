@@ -11,8 +11,8 @@ public class LldApplication {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.out.println("Project started @ "+Thread.currentThread().getName());
-		SimpleThreadsUsingRunnable simpleThreadsUsingRunnable1=new SimpleThreadsUsingRunnable(60);
-		SimpleThreadsUsingRunnable simpleThreadsUsingRunnable2=new SimpleThreadsUsingRunnable(77);
+		SimpleThreadsUsingRunnable simpleThreadsUsingRunnable1=new SimpleThreadsUsingRunnable(6);
+		SimpleThreadsUsingRunnable simpleThreadsUsingRunnable2=new SimpleThreadsUsingRunnable(7);
 		Thread thread1=new Thread(simpleThreadsUsingRunnable1);
 		Thread thread2=new Thread(simpleThreadsUsingRunnable2);
 		thread1.start();
