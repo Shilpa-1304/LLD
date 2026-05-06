@@ -25,7 +25,7 @@ public class Client {
         System.out.println("Before t2 completes,Value of Count: "+ counter.count);
         t2.join();
         System.out.println("Final Value of Count: "+ counter.count);
-        //NOTE: What join() does ? 👉 Makes main thread wait until thread completes
+        //NOTE: What join() does ?  👉 Makes main thread wait until thread completes
         //NOTE: Even after join(), result may still be wrong if Counter is not synchronized.
 
     }
