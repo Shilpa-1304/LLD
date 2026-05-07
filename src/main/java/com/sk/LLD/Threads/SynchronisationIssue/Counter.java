@@ -5,7 +5,17 @@ public class Counter {
     Counter(int n){
         this.count=n;
     }
-    //NOTE: Method level synchronization
+
+    //NOTE: Race Condition
+
+    /* public void increment(){
+        count++;
+    }
+    public void decrement(){
+        count --;
+    }*/
+
+    //NOTE: Solution1:  Method level synchronization
 
     /* public synchronized void increment(){
         count++;
@@ -14,7 +24,7 @@ public class Counter {
         count --;
     }*/
 
-    //NOTE: Block Level Synchronization
+    //NOTE: Solution 2: Block Level Synchronization
     public void increment(){
         synchronized (this){
             count++;

@@ -15,15 +15,17 @@ public class Counter {
         try {
             count++;
         } finally {
+            //NOTE: Always unlock in finally bcuz If exception occurs → deadlock possible
             lock.unlock();
         }
     }
     public void decrement(){
-        lock.lock();
+        lock.lock(); //Acquire mutex
         try {
             count--;
         } finally {
-            lock.unlock();
+            //NOTE: Always unlock in finally bcuz If exception occurs → deadlock possible
+            lock.unlock(); //Release mutex
         }
     }
 }
