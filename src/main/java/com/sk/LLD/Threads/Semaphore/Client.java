@@ -6,7 +6,9 @@ public class Client {
     public static void main(String[] args) {
         Semaphore semaphore=new Semaphore(2);
         for(int i=0;i<5;i++){
-            new SemaphoreExample(semaphore).start();
+            SemaphoreExample semaphore1=new SemaphoreExample(semaphore);
+            Thread t=new Thread(semaphore1);
+            t.start();
         }
     }
 }

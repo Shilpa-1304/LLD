@@ -2,17 +2,18 @@ package com.sk.LLD.Threads.Semaphore;
 
 import java.util.concurrent.Semaphore;
 
-public class SemaphoreExample extends Thread{
+public class SemaphoreExample implements Runnable{
     Semaphore semaphore;
     SemaphoreExample(Semaphore semaphore){
         this.semaphore=semaphore;
     }
+    @Override
     public void run(){
         try {
             semaphore.acquire();
             System.out.println(Thread.currentThread().getName() + " entered");
 
-            Thread.sleep(2000);
+            Thread.sleep(5000);
 
             System.out.println(Thread.currentThread().getName() + " leaving");
         }
