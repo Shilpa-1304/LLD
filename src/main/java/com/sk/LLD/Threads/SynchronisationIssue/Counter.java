@@ -1,7 +1,7 @@
 package com.sk.LLD.Threads.SynchronisationIssue;
 
 public class Counter {
-    int count;
+    int count; // <-Shared Resource
     Counter(int n){
         this.count=n;
     }
@@ -9,7 +9,7 @@ public class Counter {
     //NOTE: Race Condition
 
     /* public void increment(){
-        count++;
+        count++; <-- Critical Section
     }
     public void decrement(){
         count --;
